@@ -21,24 +21,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onEdit, onDelete, onStatusCha
 
   return (
     <div className={styles.taskCard}>
-      <div className={styles.header}>
+      <div className={styles.infoGroup}>
+        <span className={styles.label}>Задача</span>
         <h3 className={styles.taskTitle}>{task.title}</h3>
-        <div className={styles.actions}>
-          <button 
-            className={`${styles.actionButton} ${styles.edit}`}
-            onClick={() => onEdit(task)}
-            title="Редактировать задачу"
-          >
-            <Edit size={16} />
-          </button>
-          <button 
-            className={`${styles.actionButton} ${styles.delete}`}
-            onClick={() => onDelete(task.id)}
-            title="Удалить задачу"
-          >
-            <Trash2 size={16} />
-          </button>
-        </div>
       </div>
       
       <div className={styles.details}>
@@ -63,6 +48,22 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onEdit, onDelete, onStatusCha
           title="Изменить статус"
         >
         </button>
+        <div className={styles.actions}>
+          <button 
+            className={`${styles.actionButton} ${styles.edit}`}
+            onClick={() => onEdit(task)}
+            title="Редактировать задачу"
+          >
+            <Edit size={16} />
+          </button>
+          <button 
+            className={`${styles.actionButton} ${styles.delete}`}
+            onClick={() => onDelete(task.id)}
+            title="Удалить задачу"
+          >
+            <Trash2 size={16} />
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,16 @@
 .taskCard {
   background: white;
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 16px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20 px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
   &:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
@@ -14,22 +19,24 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   margin-bottom: 12px;
 }
 
 .taskTitle {
   font-size: 18px;
-  font-weight: 600;
-  color: #1a1a1a;
+  font-weight: 400;
+  color: #000000;
   margin: 0;
   flex: 1;
   margin-right: 16px;
+  width: 200px;
 }
 
 .actions {
   display: flex;
+  justify-content: start;
   gap: 8px;
 }
 
@@ -40,9 +47,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 30px;
 
   &:hover {
     background: #f5f5f5;
@@ -70,18 +75,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .info {
   display: flex;
+  justify-content: center;
   gap: 16px;
   align-items: center;
+  width: 350px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
 }
 
 .infoGroup {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 250px;
+  margin-left: 10px;
 }
 
 .label {
@@ -90,6 +103,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  
 }
 
 .priority {
@@ -100,17 +114,14 @@
   text-align: center;
 
   &.high {
-    background: #fef2f2;
     color: #dc2626;
   }
 
   &.medium {
-    background: #fef3c7;
     color: #d97706;
   }
 
   &.low {
-    background: #f0fdf4;
     color: #16a34a;
   }
 }
@@ -122,7 +133,9 @@
   font-weight: 500;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+
 
   &.todo {
     background: #f3f4f6;
